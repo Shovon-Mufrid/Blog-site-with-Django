@@ -7,11 +7,14 @@
 <!-- user_profile from model.py related name -->
 <h2>Your Profile</h2>
 {% if user.user_profile  %}
-<img src="/mdeia/{{user.user_profile.profile_pic}}" class="rounded-circle" width="100px" alt="">
+<img src="/media/{{user.user_profile.profile_pic}}" class="rounded-circle" width="100px" alt="">
+<br><br>
+<a href="{% url 'Login_App:picture_change' %}" class="btn btn-primary btn-sm">Change Profile Picture</a>
 {% else %}
+
 <img src="/media/profile_image/default.png" class="rounded-circle" width="150px" alt="">
 <br><br>
-<a href="" class="btn btn-primary btn-sm">Change Profile Picture</a>
+<a href="{% url 'Login_App:add_picture' %}" class="btn btn-primary btn-sm">Change Profile Picture</a>
 {% endif %}
 <br> <br>
     <p>Username: {{ user.username }} </p>

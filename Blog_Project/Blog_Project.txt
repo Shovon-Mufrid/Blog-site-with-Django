@@ -37,8 +37,10 @@ F.
 27. Media File> change url.py of main project>>> module, add urlpattern under
 28. {% if user.user_profile  %} >>>>> model.py> user related name>which calls model name
 <img src="/mdeia/{{user.user_profile.profile_prelated namec}}" alt="">model.py> user> related name>which calls model name> calls profile pic of that model
-
-
+29. take user as main to chnage profile pic>>>> user_obj(view) & user(model) must have same info // request user and object user are same
+        form = ProfilePic(request.POST, request.FILES)
+30. change pro pic>>>> o change an existing value, instance is added
+31. to remove additional picture in media>> pip install django-cleanup // settings.py>install_app>>    'django_cleanup.apps.CleanupConfig'
 
 
 

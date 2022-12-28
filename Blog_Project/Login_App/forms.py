@@ -18,9 +18,11 @@ class UserProfileChange(UserChangeForm):
         fields = ('first_name', 'last_name', 'username', 'email', 'password')
 
 
-class ProfilePic(forms.ModeForm):
+class ProfilePic(forms.ModelForm):
     class Meta:
         model = UserProfile
+        fields = ['profile_pic',]
+        
 
 
 
