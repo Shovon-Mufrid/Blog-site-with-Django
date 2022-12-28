@@ -42,6 +42,31 @@ F.
 30. change pro pic>>>> o change an existing value, instance is added
 31. to remove additional picture in media>> pip install django-cleanup // settings.py>install_app>>    'django_cleanup.apps.CleanupConfig'
 
+G.
+Dropdown
+
+h.
+Blog template create
+blog>views.py> add class based views
+
+function-based views use login_required
+class-based views use mixin
+
+views.py>>> form_valid works on class to valid the forms
+        self is used to call any variable inside class
+        import uuid #unique id generate
+
+
+cmd> py 
+>>>import uuid
+>>> title = "Russia On War"  
+>>> slug = title.replace(' ', '-') + "-" + str(uuid.uuid4())
+>>> print(slug)
+
+
+
+
+
 
 
 
