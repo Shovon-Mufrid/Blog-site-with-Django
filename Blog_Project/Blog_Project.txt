@@ -63,6 +63,15 @@ cmd> py
 >>> slug = title.replace(' ', '-') + "-" + str(uuid.uuid4())
 >>> print(slug)
 
+i.
+1.Time change for blog>>> settings> TIME_ZONE = 'Asia/Dhaka'
+2.Sorting Blog List >>>   queryset = Blog.objects.order_by('-publish_date') // - is for descending // + for ascending or dont use it at all
+OR, model>> class Meta:
+                ordering = ['-publish_date',]
+3. Blog content summerize>>> templatetags filter create>>add in blog_list                 
+4. urls.py>>> slug:slug>slug data type add slug 
+5. blog_details.html>>>             {% for comment in blog.blog_comment  %}   // blog comment from model.py>Comment
+
 
 
 
