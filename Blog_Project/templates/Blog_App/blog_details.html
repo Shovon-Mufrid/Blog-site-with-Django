@@ -9,6 +9,7 @@
             <h4>Posted By: @{{blog.author}}</h4>
             <h6><i>Published On: {{blog.publish_date}}</i></h6>
             <h6><i>Updated On: {{blog.update_date}}</i></h6>
+            <h6><i>{{blog.liked_blog.count}} Likes | {{blog.blog_comment.count}} Comments</i></h6>
         </div>
         <div class="col-sm-6">
             <img src="/media/{{blog.blog_image}}" alt="" width="50%">

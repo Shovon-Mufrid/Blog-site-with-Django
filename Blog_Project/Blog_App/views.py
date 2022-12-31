@@ -56,7 +56,7 @@ def blog_details(request,slug):
 
 
 
-# LIKED
+#LIKED
 @login_required
 def liked(request, pk):
     blog = Blog.objects.get(pk=pk)
