@@ -42,9 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Blog_App','Login_App', 'crispy_forms',
     'django_cleanup.apps.CleanupConfig',
+    'ckeditor','ckeditor_uploader',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 
 MIDDLEWARE = [
@@ -124,12 +126,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [STATIC_DIR,]
+STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [STATIC_DIR,]
 
+CKEDITOR_BASEPATH = STATIC_ROOT / 'static/ckeditor/ckeditor/'
 # MEDIA
-MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = 'media/'
+MEDIA_ROOT = MEDIA_DIR
 
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 # Login_url
 LOGIN_URL = '/account/signin/'

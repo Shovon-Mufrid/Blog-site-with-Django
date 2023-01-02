@@ -73,14 +73,29 @@ OR, model>> class Meta:
 5. blog_details.html>>>             {% for comment in blog.blog_comment  %}   // blog comment from model.py>Comment
 
 
+j. CKEDITOR>>>>
+1. pip install ckeditor 
+2. settings.py>>>Install_app>>> add ckedttor, ckeditor_upload 
+3. settings.py>>>
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [STATIC_DIR,]
+
+CKEDITOR_BASEPATH = STATIC_ROOT / 'static/ckeditor/ckeditor/'
+# MEDIA
+MEDIA_URL = 'media/'
+MEDIA_ROOT = MEDIA_DIR
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+4. use ckeditor.fields import RichTextEdit
+5. run>>> py manage.py collectstatic
+6. migrate
+7. 
 
 
 
-
-
-
-
-
+ADMIN:
 shovon
 shovon123
 

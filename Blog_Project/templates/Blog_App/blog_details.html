@@ -15,7 +15,7 @@
             <img src="/media/{{blog.blog_image}}" alt="" width="50%">
         </div>
         <p>
-            {{blog.blog_content|linebreaks}}
+            {{blog.blog_content|striptags|linebreaks}}
         </p>
         <hr>
     </div>

@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
+
+
 {% load crispy_forms_tags %}
 {% block title_block %} Create Blog {% endblock title_block %}
 {% block body_block %}
-   
+{% load static %}
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+<!-- <div className="d-div"
+dangerouslySetInnerHTML={{ __html: item.details }}>
+</div> -->
+
 <h2>Write Your Blog Here</h2>
 <form action="" method="POST" enctype="multipart/form-data">
     {{ form|crispy }}
