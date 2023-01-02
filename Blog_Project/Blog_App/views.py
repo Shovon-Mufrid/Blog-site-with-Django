@@ -77,8 +77,17 @@ def unliked(request,pk):
     return HttpResponseRedirect(reverse('Blog_App:blog_details', kwargs={'slug':blog.slug} ))
 
 
-
-
-
+#MY BLOGS
+class MyBlogs(LoginRequiredMixin,TemplateView):
+    # context_object_name= 'myblogs'
+    template_name = "Blog_App/my_blogs.html"
+    
+class UpdateBlog(LoginRequiredMixin, UpdateView):
+    model= Blog
+    fields = ('blog_title', 'blog_content', 'blog_image')
+    template_name= 'Blog_App/edit_blog.html'
+    
+    def get_success_url(self, **kwargs):
+           return reverse_lazy('Blog_App:blog_details', kwargs={'slug':self.object.slug})
 
     

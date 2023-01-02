@@ -9,5 +9,7 @@ urlpatterns = [
     path('details/<slug>', views.blog_details, name='blog_details'),
     path('liked/<pk>/', views.liked, name='liked_post'),
     path('unliked/<pk>/', views.unliked, name='unliked_post'),
+    path('my-blogs/', views.MyBlogs.as_view(), name='my_blogs'),
+    path('edit/<slug>/', views.UpdateBlog.as_view(), name='edit_blog'),
 
 ]
