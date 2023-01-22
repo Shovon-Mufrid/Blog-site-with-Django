@@ -3,11 +3,13 @@ A
 2. Create Virtual environment-activate
 3. Install Django
 4. Install pillow
+5. install ckeditor
+5. install crispy_forms
 5. Install APP
 6. ADD TEMPLATES,STATIC, MEDIA and configure settings
 7. Create Models for Login app>>>> it will be one to one relation
 8. Create Models for Blog app>>>> it will be foreign key>> verbose_name-> label // auto_now_add=True -> auto time will be set by new entry, user cant't change // auto_now=True -> everytime it is update, it will be updated everytime, but auto_now_add will be fixed // Slug -> title based link with number.
-B
+8. django-crispy-forms
 9. register models in admin.py
 10. Create super user>>> smufrid / s********7
 11. make urls in Project
@@ -18,7 +20,7 @@ B
 C
 16. Make a form by using django documentation, use it on Login/views.py>>> UserCreationForm
 17. signup form create in views>html>url
-18. install a form>>>> pip install django-crispy-forms  >>> settings.py>INSTALLED_APP >> add crispy_forms // CRISPY_TEMPLATE_PACK = 'uni-form' [#bootstrap, bootstrap3, bootstrap4,bootstrap5, uni-form] // signup.html>> {% load crispy_forms_tags %}
+18. INSTALL a form>>>> pip install django-crispy-forms  >>> settings.py>INSTALLED_APP >> add crispy_forms // CRISPY_TEMPLATE_PACK = 'uni-form' [#bootstrap, bootstrap3, bootstrap4,bootstrap5, uni-form] // signup.html>> {% load crispy_forms_tags %}
 
 D
 19. views.py>>>signin>>>> authentication module 
@@ -74,7 +76,7 @@ OR, model>> class Meta:
 
 
 j. CKEDITOR>>>>
-1. pip install ckeditor 
+pip install django-ckeditor
 2. settings.py>>>Install_app>>> add ckedttor, ckeditor_upload 
 3. settings.py>>>
 STATIC_URL = 'static/'
