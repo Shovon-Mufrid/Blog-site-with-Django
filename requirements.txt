@@ -1,0 +1,6 @@
+django-ckeditor
+django
+pillow
+# mysqlclient
+django-crispy-forms
+django-cleanup
